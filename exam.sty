@@ -1,0 +1,275 @@
+\ProvidesPackage{exam}
+
+\usepackage{amsmath}    % for maths stuff
+\usepackage{amssymb}    % for maths stuff
+\usepackage{anyfontsize}% for exam name
+\usepackage{asymptote}  % for diagrams
+\usepackage{changepage} % for margins
+\usepackage{color}      % for answers
+\usepackage{enumitem}   % for enumerates
+\usepackage{fancyhdr}   % for styles and footers
+\usepackage{framed}     % for boxes
+\usepackage{geometry}   % for margins
+\usepackage{graphicx}   % for inserting images
+\usepackage{marginnote} % for marks
+\usepackage{multicol}   % for multiple column mc
+\usepackage{multirow}   % for table stuff
+\usepackage{pgffor}     % for lines
+\usepackage{setspace}   % for spacing with lines
+\usepackage{tikz}       % for diagrams
+\usepackage{totalcount} % for counting questions
+\usepackage{accents}    % for tilde underneath
+\usepackage{fontspec}
+\usepackage{ragged2e}
+
+\usepackage{physics}
+\everymath{\displaystyle}
+
+\fancypagestyle{cover}{
+	\fancyhf{}
+	\fancyfoot[L]{\footnotesize\hspace{-22pt}\textsf{2077}}
+	\renewcommand{\headrulewidth}{0pt}
+}
+\justifying
+
+\setmainfont{Times New Roman}
+\setsansfont{Helvetica Neue}
+
+\newcounter{QuestionCounter}
+\setcounter{QuestionCounter}{1}
+
+\geometry{
+	a4paper,
+	margin=2.5cm,
+	headheight=14.5pt,
+	marginparsep=0mm
+}
+
+\pagestyle{fancy}
+\fancyfoot[c]{--\ \thepage\ --}
+
+\renewcommand{\headrulewidth}{0pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{12pt}
+
+% define a small bullet style for lists
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% make space between bullet lists smaller and indented in line
+\setlist[itemize]{
+	itemsep=-0.1em,
+	align=parleft,
+	leftmargin=1em,
+	labelwidth=0.5em
+}
+
+\newenvironment{multiplechoice}{
+	\vspace{-12pt}
+	\renewcommand{\labelenumi}{\textbf{\arabic{enumi}}}
+	\renewcommand{\labelenumii}{\Alph{enumii}.}
+
+	\setlist[enumerate]{
+		align=parleft,
+		labelindent=0em,
+		itemsep=1em
+	}
+
+	\setlist[enumerate,1]{
+		itemsep=2em
+	}
+
+	\begin{enumerate}
+	\addtocounter{QuestionCounter}{-1}
+	\setcounter{enumi}{\value{QuestionCounter}}
+}{
+	\stepcounter{QuestionCounter}
+	\addtocounter{QuestionCounter}{\value{enumi}}
+	\end{enumerate}
+}
+
+\newcommand{\mrks}[1]{\marginnote{\textbf{#1}}[0em]\ignorespaces}
+
+\newenvironment{shortanswer}{
+	\begin{adjustwidth}{}{10mm}
+
+	\renewcommand{\labelenumi}{(\alph{enumi})}
+	\renewcommand{\labelenumii}{(\roman{enumii})}
+
+	\setlist[enumerate]{
+		align=parleft,
+		labelindent=0em,
+		parsep=0.5em
+	}
+
+	\setlist[enumerate,1]{
+		itemsep=2em
+	}
+
+	\setlist[enumerate,2]{
+		align=right,
+		itemsep=1em,
+		topsep=1em,
+		labelsep=1em
+	}
+}{
+	\end{adjustwidth}
+}
+
+\newenvironment{shortquestion}[1]{
+	\textbf{Question \theQuestionCounter} (#1 marks)
+
+}{
+	\stepcounter{QuestionCounter}
+}
+
+\newenvironment{bookletquestion}[1]{
+	\textbf{Question \theQuestionCounter} (#1 marks) Use the Question \theQuestionCounter\ Writing Booklet
+
+}{
+	\stepcounter{QuestionCounter}
+}
+
+\newcommand{\mcpic}[2]{
+	\raisebox{-0.9\height}{
+		\includegraphics[width=#2]{#1}
+	}
+}
+
+\newcommand{\pic}[2]{
+	\vspace{-1em}
+	\begin{center}
+		\includegraphics[width=#2]{#1}
+	\end{center}
+}
+
+\newcommand{\nextpage}{\the\numexpr\thepage+1}
+
+\newcommand{\questionbreak}{
+	\end{enumerate}
+	\begin{center}
+		\textbf{Question \theQuestionCounter\ continues on page \nextpage}
+	\end{center}
+	\pagebreak
+	Question \theQuestionCounter\ (continued)
+	\begin{enumerate}[resume]
+}
+
+\newcommand{\centerbold}[1]{
+	\begin{center}\textbf{#1}\end{center}
+}
+\newcommand{\questionend}{
+	\vspace{1em}
+	\centerbold{End of Question \theQuestionCounter}
+}
+
+\newcommand{\blankpage}{
+	\hspace{0mm}
+	\vfill
+	\begin{center}
+		BLANK PAGE
+	\end{center}
+	\vfill
+	\pagebreak
+}
+
+\newcommand{\lines}[1]{
+
+	\foreach \n in {1,...,#1}{
+			\parbox[b][2em][b]{\linewidth}{\dotfill}
+		}
+}
+
+\newcommand{\blanklinedpage}{
+	{\hbadness=10000
+		\pagebreak
+		\begin{framed}\begin{adjustwidth}{}{-10mm}
+				\lines{25}
+			\end{adjustwidth}\end{framed}
+	}
+}
+
+\newcommand{\utilde}[1]{
+	\underaccent{\tilde}{#1}
+}
+
+\newcommand{\coverpageleftcolumn}[1]{
+	\begin{minipage}[t]{2.9cm}
+		\RaggedRight
+		\vspace{-1.4em}\rule{2.9cm}{0.5pt}
+		\textbf{#1}
+	\end{minipage}
+}
+
+\newenvironment{generalinstructions}{
+	\coverpageleftcolumn{General\\Instructions}
+	\begin{minipage}[t]{12.85cm}
+	\begin{itemize}
+}{
+	\end{itemize}
+	\end{minipage}
+}
+
+\newenvironment{sectionlist}[1]{
+	\coverpageleftcolumn{Total marks:\\#1}
+	\begin{minipage}[t]{12.85cm}
+}{
+	\end{minipage}
+}
+
+\newcommand{\examnameyear}[2]{
+	\setlength{\fboxsep}{4pt}
+	\setlength{\fboxrule}{0.5pt}
+	\fbox{\Large{\textbf{#1}}}
+	\ \raisebox{0.2em}{\fontsize{10pt}{10pt}\selectfont \textbf{\uppercase{#2}}}
+	\vspace{6pt}
+}
+
+\newcommand{\coursename}[2]{
+	{\fontsize{#1}{#1}\selectfont #2}
+}
+
+\newenvironment{coverpage}{
+	\thispagestyle{cover}
+	\sffamily
+	\begin{multicols}{2}
+		\RaggedRight
+		\hspace{95pt}\llap{
+			\raisebox{-2px}[\height][\depth]{
+				\includegraphics[height=74pt]{W2_logo.png} \hfill
+			}
+		}
+
+		\columnbreak
+		\RaggedLeft
+
+		\hfill \begin{tabular}{|p{10pt}|p{10pt}|p{10pt}|p{10pt}|p{10pt}|}
+			\hline
+			\rule{0pt}{24pt} &  &  &  & \\
+			\hline
+		\end{tabular} \\[4pt]
+		\hfill Centre Number \\[10pt]
+		\hfill \begin{tabular}{|p{10pt}|p{10pt}|p{10pt}|p{10pt}|p{10pt}|p{10pt}|p{10pt}|p{10pt}|p{10pt}|}
+			\hline
+			\rule{0pt}{24pt} &  &  &  &  &  &  &  & \\
+			\hline
+		\end{tabular} \\[4pt]
+		\hfill Student Number
+	\end{multicols}
+	\vspace{-34pt}
+}{
+	\justifying
+	\rmfamily
+	\pagebreak
+}
+
+\newenvironment{sectionheader}[1]{
+	{\hbadness=10000
+		\large \textbf{#1}
+
+	}
+	\normalsize
+}{
+	\\ \rule{\textwidth}{1pt}
+	\vspace{-12pt}
+}
