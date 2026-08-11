@@ -44,14 +44,14 @@
   \begin{center}
   \begin{asy}
     import graph;
-    size(7cm);
+    size(8cm);
     real f(real x, real y) {
       return 1/(y-x);
     }
-    real xmin = -10, xmax = 10;
-    real ymin = -10, ymax = 10;
-    int nx = 20, ny = 20;
-    real len = 0.35;
+    real xmin = -5, xmax = 5;
+    real ymin = -5, ymax = 5;
+    int nx = 10, ny = 10;
+    real len = 0.2;
     for (int i = 0; i <= nx; ++i) {
       real x = xmin + (xmax - xmin) * i / nx;
       for (int j = 0; j <= ny; ++j) {
@@ -66,10 +66,10 @@
              linewidth(0.7));
       }
     }
-    draw((xmin, 0) -- (xmax, 0), Arrow);
-    draw((0, ymin) -- (0, ymax), Arrow);
-    label("$x$", (xmax+0.5, 0), E);
-    label("$y$", (0, ymax+0.5), N);
+    draw((xmin-1, 0) -- (xmax+1, 0), Arrow);
+    draw((0, ymin-1) -- (0, ymax+1), Arrow);
+    label("$x$", (xmax+1, 0), E);
+    label("$y$", (0, ymax+1), N);
   \end{asy}
   \end{center}
   % \end{noindent}
@@ -108,7 +108,7 @@
 	% \begin{noindent}
   \begin{center}
   \begin{asy}
-    size(7cm);
+    size(8cm);
     draw(circle((0,0), 1), black);
     draw((-1,0) -- (1,0), black);
     draw((0,0) -- (1/2, sqrt(3)/2), black);
@@ -220,12 +220,9 @@
 		\questionend
 	\end{bookletquestion}
 	\pagebreak
-	\begin{bookletquestion}{??}
+	\begin{bookletquestion}{16}
 		\begin{enumerate}
-			\item \begin{enumerate}
-				      \item \mrks{2} Express $\sin x -\sqrt{3}\cos x$ in the form $R\sin(x-\alpha)$, where $R>0$ and \\ $0\leq\alpha\leq\frac{\pi}{2}$.
-				      \item \mrks{1} Hence, solve $\sin x -\sqrt{3}\cos x=2$ for $0\leq x \leq \pi$.
-			      \end{enumerate}
+			\item \mrks{2} Find $\int\sin x \sin 3x \dd{x}$.
 			\item Consider the differential equation $\dv{y}{x}=-(x^2-1)(y-1)$ and its slope field, which is graphed below.
 			      % \begin{noindent}
             \begin{center}
@@ -252,8 +249,8 @@
               }
               draw((xmin-0.5, 0) -- (xmax+0.5, 0), Arrow);
               draw((0, ymin-0.5) -- (0, ymax+0.5), Arrow);
-              label("$x$", (xmax+0.7, 0), E);
-              label("$y$", (0, ymax+0.7), N);
+              label("$x$", (xmax+0.5, 0), E);
+              label("$y$", (0, ymax+0.5), N);
               for (int i = -2; i <= 2; ++i) {
                 if (i != 0)
                   label(string(i), (i,0), 2S);
@@ -267,7 +264,7 @@
             % \end{noindent}
 			      \begin{enumerate}
 				      \item \mrks{1} By referring to the slope field for the differential equation, explain why a solution could not have the graph shown below.
-                 
+
 				            \hspace*{-\leftmargin}%
 				            \begin{minipage}{\dimexpr\linewidth+\leftmargin\relax}
 					            % \begin{noindent}
@@ -283,8 +280,8 @@
                         draw((xmin, 0) -- (xmax, 0), Arrow);
                         draw((0, ymin) -- (0, ymax), Arrow);
                         draw(graph(f, -2.2, 2.2), black, Arrows);
-                        label("$x$", (xmax+0.2, 0), E);
-                        label("$y$", (0, ymax+0.2), N);
+                        label("$x$", (xmax, 0), E);
+                        label("$y$", (0, ymax), N);
                         for (int i = -2; i <= 2; ++i) {
                           draw((i,-0.08)--(i,0.08), black);
                           if (i != 0)
@@ -299,14 +296,198 @@
                       \end{center}
                       % \end{noindent}
 				            \end{minipage}
-				            \questionbreak
 				      \item \mrks{3} Find the particular solution of the differential equation that passes through the point $(0, 2)$.
+			      \end{enumerate}
+			      \questionbreak
+			\item \begin{enumerate}
+				      \item \mrks{2} Express $\sin x -\sqrt{3}\cos x$ in the form $R\sin(x-\alpha)$, where $R>0$ and \\ $0\leq\alpha\leq\frac{\pi}{2}$.
+				      \item \mrks{1} Hence, solve $\sin x -\sqrt{3}\cos x=2$ for $0\leq x \leq \pi$.
+			      \end{enumerate}
+			\item \mrks{3} A biased coin has probability $0.7$ of landing on heads when tossed.
+
+			      What is the most likely combination of heads and tails to occur in a sequence of five tosses?
+			      Justify your answer with relevant calculations.
+			\item Consider the graph of $y=f(x)$ below.
+			      % \begin{noindent}
+            \begin{center}
+            \begin{asy}
+              size(10cm);
+              draw((-4,0) -- (4,0), Arrow);
+              label("$x$", (4,0), E);
+              draw((0,-2) -- (0,2), Arrow);
+              label("$y$", (0,2), N);
+              label("$O$", (0,0), SW);
+              draw((-3.5, -1.5) -- (-1,1), black, BeginArrow);
+              draw((3.5, 1.5) -- (1,-1), black, BeginArrow);
+              draw((1,-1) -- (-1,1), black);
+              label("$-2$", (-2,0), NW);
+              label("$2$", (2,0), NW);
+              label("$(-1,1)$", (-1,1), N);
+              label("$(1,-1)$", (1,-1), S);
+              label("$y=f(x)$", (3.5, 1.5), N);
+            \end{asy}
+            \end{center}
+            % \end{noindent}
+			      On separate number planes, graph each of the following:
+			      \begin{enumerate}
+				      \item \mrks{2} $y=\dfrac{1}{f(x)}$.
+				      \item \mrks{2} $y=f\qty(\abs{x}-2)$.
 			      \end{enumerate}
 		\end{enumerate}
 		\questionend
-		\centerbold{End of paper}
+	\end{bookletquestion}
+	\pagebreak
+	\begin{bookletquestion}{14}
+		\begin{enumerate}
+			\item \mrks{3} The roots of the polynomial $P(x)=x^3+qx^2+rx+t$ are in an arithmetic progression.
+			      Show that
+			      \[2q^3-9qr+27t=0.\]
+			\item \mrks{3} In a square with sides of unit length, $51$ points are chosen.
+
+			      Show that there are at least $3$ points which lie within a circle of radius $\frac{1}{5\sqrt{2}}$.
+			\item Two chemicals $\mathcal{C}_1$ and $\mathcal{C}_2$ are put together in a solution, where they react to form a solid, $\mathcal{S}$.
+			      The rate of increase of the mass, $m$ kg, of $\mathcal{S}$ is proportional to the product of the masses of unreacted $\mathcal{C}_1$ and $\mathcal{C}_2$ present at time $t$ minutes.
+
+			      It takes $1$kg of $\mathcal{C}_1$ and $3$kg of $\mathcal{C}_2$ to form $4$kg of $\mathcal{S}$.
+
+			      Initially, $2$kg of $\mathcal{C}_1$ and $3$kg of $\mathcal{C}_2$ are put together in solution, and $1$kg of $\mathcal{S}$ forms in 1 minute.
+			      \begin{enumerate}
+				      \item \mrks{3} Carefully prove that
+				            \[\dv{m}{t}=k(8-m)(4-m),\]
+				            where $k$ is a constant.
+				      \item \mrks{3} Given that
+				            \[\dfrac{1}{(8-x)(4-x)}=-\dfrac{1}{4(8-x)}+\dfrac{1}{4(4-x)},\]
+				            show that
+				            \[t=\dfrac{1}{\quad\ln\frac{7}{6}\quad}\ln\qty(\dfrac{8-m}{8-2m}),\]
+				            for $0\leq m \leq 4$.
+				      \item \mrks{2} Hence, find the exact mass of $\mathcal{S}$ formed after $2$ minutes.
+			      \end{enumerate}
+		\end{enumerate}
+		\questionend
+	\end{bookletquestion}
+	\pagebreak
+	\begin{bookletquestion}{18}
+		\begin{enumerate}
+			\item \mrks{3} The function $f(x)=\frac{1+kx}{x^2-1}$ is continuous on the domain $-1<x<1$.
+
+			      Find the values of $k$ for which the inverse function $f^{-1}(x)$ exists.
+			\item \mrks{2} Prove that $\cos^{-1}(x)+\cos^{-1}(-x)=\pi$.
+			\item In the diagram below, $\triangle{AOB}$ is right-angled with $\angle{AOB}=90^\circ$.
+
+			      The midpoints of $OA$, $AB$ and $OB$ are $M$, $N$ and $L$, respectively.
+
+			      The intersection of $ML$ and $ON$ is $X$.
+			      % \begin{noindent}
+            \begin{center}
+            \begin{asy}
+            import geometry;
+            size(10cm);
+            pair O = (0, 0);
+            pair A = (3, 4);
+            pair B = (25/3, 0);
+            pair M = (3/2, 2);
+            pair N = (17/3, 2);
+            pair L = (4, 0);
+            pair X = intersectionpoint(M--L, O--N);
+            draw(O--A);
+            draw(A--B);
+            draw(O--B);
+            draw(M--N);
+            draw(O--N);
+            draw(M--L);
+            draw(N--L);
+            pair u = unit(O - A);
+            pair v = unit(B - A);
+            real r = 0.28;
+            draw(A + r*u -- A + r*u + r*v -- A + r*v);
+            label("$O$", O, SW);
+            label("$A$", A, NW+0.6E);
+            label("$B$", B, SE);
+            label("$M$", M, W);
+            label("$N$", N, NE);
+            label("$L$", L, S);
+            label("$X$", X, 2S);
+            label("\shortstack{NOT TO \\[0.4em] SCALE}", (8, 2.5));
+            \end{asy}
+            \end{center}
+            % \end{noindent}
+			      Let $\utilde{a}=\overrightarrow{OA}$ and $\utilde{b}=\overrightarrow{OB}$.
+			      \begin{enumerate}
+				      \item \mrks{2} Show that $OMNL$ is a parallelogram.
+				      \item \mrks{4} Suppose that $AX$ is perpendicular to $MN$.
+
+				            Show that $\abs{\utilde{b}}=\sqrt{3}\abs{\utilde{a}}$.
+			      \end{enumerate}
+			      \questionbreak
+			\item \mrks{3} Alex hits two balls at the same time from the origin $O$ towards a target on a vertical wall.
+
+			      The velocity of projection of the first ball is $Vms^{-1}$ and its angle of projection is $\alpha$ to the horizontal,
+			      while the velocity of projection of the second ball is $\frac{15V}{7}ms^{-1}$ and its angle of projection is $2\alpha$ to the horizontal.
+			      % \begin{noindent}
+            \begin{center}
+            \begin{asy}
+              import graph;
+              size(10cm, 8cm);
+              real xmax = 7.0;
+              real ymax = 5.8;
+              draw((-0.6,0)--(xmax,0), Arrow);
+              draw((0,-0.5)--(0,ymax), Arrow);
+              label("$x$", (xmax,0), E);
+              label("$y$", (0,ymax), N);
+              label("$O$", (0,0), SW);
+              draw((6.25,0)--(6.25,5.15));
+              path lower = 
+                  (0,0)
+                  .. controls (1.5,1.05) and (3.5,1.65)
+                  .. (6.25,1.45);
+              draw(lower);
+              path upper =
+                  (0,0)
+                  .. controls (1.7,4.7) and (3.7,5.45)
+                  .. (6.25,2.75);
+              draw(upper);
+              dot((6.25,1.45));
+              dot((6.25,2.75));
+              label("$A$", (6.25,1.45), E);
+              label("$B$", (6.25,2.75), E);
+              real alpha = 35;
+              pair V = 3*dir(alpha);
+              draw((0,0)--V, Arrow(TeXHead));
+              label("$V$", V + (0.08,0.10), NW);
+              pair W = 5*dir(2*alpha);
+              draw((0,0)--W, Arrow(TeXHead));
+              label("$\displaystyle\frac{15V}{7}$", W + (0.08,0.10), NW);
+              draw(arc((0,0), 1.45, 0, alpha), Arrow(TeXHead));
+              label("$\alpha$", 0.92*dir(alpha/2), E);
+              draw(arc((0,0), 1.95, 0, 2*alpha), Arrow(TeXHead));
+              label("$2\alpha$", 1.45*dir(alpha), NW+(-0.4,0.9));
+            \end{asy}
+            \end{center}
+            % \end{noindent}
+			      It is known that both balls hit the wall at the same time. By considering the position vectors for both balls, show that $\cos\alpha=\frac{5}{6}$.
+			\item \mrks{4} \textit{You may use the information in a standard normal distribution table to answer this question.}
+
+			      W\textsuperscript{2} education is holding a graduation party and sends out invitations to its students.
+			      All invited students are guaranteed to attend and each student is allowed to bring up to one \textit{tag-along} (an additional student who was not invited).
+
+			      The probability that any individual student will bring a \textit{tag-along} is $40\%$.
+
+			      Since the venue has a strict capacity limit of $400$ total attendees due to space constraints,
+			      W\textsuperscript{2} education deliberately invites less students in order to accomodate for any \textit{tag-alongs}.
+
+			      Determine the maximum number of students that W\textsuperscript{2} education should invite in order to ensure that there is less than a $1\%$ chance of the venue exceeding capacity.
+			      \centerbold{End of paper}
+		\end{enumerate}
 	\end{bookletquestion}
 \end{shortanswer}
 \pagebreak
+\newpage
+\blankpage
+\newpage
+\blankpage
+\newpage
+\blankpage
+\newpage
+\thispagestyle{lastpage}
 \blankpage
 \end{document}

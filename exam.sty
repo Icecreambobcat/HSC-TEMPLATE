@@ -30,6 +30,11 @@
 	\fancyfoot[L]{\footnotesize\hspace{-22pt}\textsf{2077}}
 	\renewcommand{\headrulewidth}{0pt}
 }
+\fancypagestyle{lastpage}{
+	\fancyhf{}
+	\fancyfoot[c]{--\ \thepage\ -- \\ {\scriptsize\textsf{\textcopyright\ 2077 W\textsuperscript{2} Education Standards Authority}}}
+	\renewcommand{\headrulewidth}{0pt}
+}
 \justifying
 
 \setmainfont{Times New Roman}
@@ -148,7 +153,7 @@
 \newcommand{\questionbreak}{
 	\end{enumerate}
 	\begin{center}
-		\textbf{Question \theQuestionCounter\ continues on page \nextpage}
+		\hspace{2em} \textbf{Question \theQuestionCounter\ continues on page \nextpage}
 	\end{center}
 	\pagebreak
 	Question \theQuestionCounter\ (continued)
@@ -160,7 +165,7 @@
 }
 \newcommand{\questionend}{
 	\vspace{1em}
-	\centerbold{End of Question \theQuestionCounter}
+	\centerbold{\hspace{2em} End of Question \theQuestionCounter}
 }
 
 \newcommand{\blankpage}{
@@ -264,6 +269,7 @@
 }
 
 \newenvironment{sectionheader}[1]{
+	\setlength{\parskip}{12pt}
 	{\hbadness=10000
 		\large \textbf{#1}
 
@@ -271,5 +277,6 @@
 	\normalsize
 }{
 	\\ \rule{\textwidth}{1pt}
-	\vspace{-12pt}
+	\vspace{-20pt}
+	\setlength{\parskip}{24pt}
 }
