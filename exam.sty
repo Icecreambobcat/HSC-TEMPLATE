@@ -153,7 +153,7 @@
 \newcommand{\questionbreak}{
 	\end{enumerate}
 	\begin{center}
-		\hspace{2em} \textbf{Question \theQuestionCounter\ continues on page \nextpage}
+		\textbf{Question \theQuestionCounter\ continues on page \nextpage}
 	\end{center}
 	\pagebreak
 	Question \theQuestionCounter\ (continued)
@@ -161,11 +161,16 @@
 }
 
 \newcommand{\centerbold}[1]{
-	\begin{center}\textbf{#1}\end{center}
+	\hfuzz=\maxdimen
+	\parbox{\textwidth}{
+		\begin{center}\textbf{#1}\end{center}
+	}
+
 }
+
 \newcommand{\questionend}{
 	\vspace{1em}
-	\centerbold{\hspace{2em} End of Question \theQuestionCounter}
+	\centerbold{End of Question \theQuestionCounter}
 }
 
 \newcommand{\blankpage}{
@@ -186,12 +191,12 @@
 }
 
 \newcommand{\blanklinedpage}{
-	{\hbadness=10000
-		\pagebreak
-		\begin{framed}\begin{adjustwidth}{}{-10mm}
-				\lines{25}
-			\end{adjustwidth}\end{framed}
-	}
+	\hbadness=10000
+	\pagebreak
+	\begin{framed}\begin{adjustwidth}{}{-10mm}
+			\lines{25}
+		\end{adjustwidth}\end{framed}
+
 }
 
 \newcommand{\utilde}[1]{
