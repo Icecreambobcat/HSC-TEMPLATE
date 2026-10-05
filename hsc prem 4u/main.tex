@@ -1,0 +1,631 @@
+\documentclass[12pt]{extarticle}
+\usepackage{exam}
+\begin{document}
+\input{coverpage.tex}
+
+\begin{sectionheader}{Section I}
+	\textbf{10 marks\\
+		Attempt Questions 1--10\\
+		Allow about 15 minutes for this section}
+
+	Use the multiple-choice answer sheet for Questions 1--10.
+\end{sectionheader}
+\begin{multiplechoice}
+	\item Which of the following is equal to $\sin\theta+i\cos\theta$?
+	\begin{enumerate}
+		\item $ie^{-i\theta}$
+		\item $ie^{i\theta}$
+		\item $-ie^{-i\theta}$
+		\item $-ie^{i\theta}$
+	\end{enumerate}
+
+	\item Consider the statement
+	\begin{center}
+		\textit{"Not all that glitters is gold."}
+	\end{center}
+	Which of the following is the negation?
+
+	\begin{enumerate}
+		\item All things that glitter are NOT gold
+		\item All that glitters is gold
+		\item Something glitters that is NOT gold
+		\item Something that is gold does NOT glitter
+	\end{enumerate}
+
+	\item What is the value of $\abs{e^{6i}+e^{8i}}$?
+	\begin{enumerate}
+		\item $2\sin(\frac{1}{2})$
+		\item $2\sin 1$
+		\item $2\cos(\frac{1}{2})$
+		\item $2\cos 1$
+	\end{enumerate}
+
+	\pagebreak
+	\item Let $n$ be an odd positive integer greater than $2$ that is NOT prime.
+
+	Let $k$ be a prime divisor of $n$.
+
+	Which of the following statements must be true?
+	\begin{enumerate}
+		\item $k\leq\sqrt{n}$
+		\item $k\geq\sqrt{n}$
+		\item $k\leq\frac{n}{3}$
+		\item $\frac{n}{k}$ must be prime
+	\end{enumerate}
+	\item A light string passes a smooth pulley fixed at $A$. Two masses, $4m$kg and $2m$kg, are attached to the ends of the string, as shown.
+	% \begin{noindent}
+  \begin{center}
+  \begin{asy}
+    size(7cm);
+    draw(circle((0,4), 1));
+    fill(circle((0,4), 0.075), black);
+    label("$A$", (0,4), 2NE);
+    draw((1,4) -- (1,0), black);
+    draw((-1,4) -- (-1,1), black);
+    draw((0.5,0) -- (0.5,-1) -- (1.5,-1) -- (1.5,0) -- cycle, black);
+    draw((-1.5,1) -- (-1.5,0) -- (-0.5,0) -- (-0.5,1) -- cycle, black);
+    label("$4m$", (1,-0.5));
+    label("$2m$", (-1,0.5));
+  \end{asy}
+  \end{center}
+  % \end{noindent}
+	The acceleration due to gravity is $g\mathrm{ms^{-2}}$.
+
+	The masses are moving vertically in a resistive medium, where the resistive force on each mass has magnitude $kv$, where $v$ is the speed of the mass.
+
+	What is the terminal speed of the larger mass?
+	\begin{enumerate}
+		\item $\frac{mg}{k}$
+		\item $\frac{2mg}{k}$
+		\item $\frac{3mg}{k}$
+		\item $\frac{4mg}{k}$
+	\end{enumerate}
+
+	\pagebreak
+	\item The locus in the complex plane defined by $\operatorname{Arg}(z-2i)-\operatorname{Arg}(z) = \theta$ is a semicircle with its endpoints removed, as shown.
+	% \begin{noindent}
+  \begin{center}
+  \begin{asy}
+    size(7cm);
+    arrowtexfactor = 2;
+    draw((-2,0) -- (2,0), black, Arrow(TeXHead));
+    draw((0,-1) -- (0,3), black, Arrow(TeXHead));
+    label("$O$", (0,0), SW);
+    draw(arc((0,1), 1, 90, 270), black);
+    filldraw(circle((0,0), 0.05), white, black);
+    filldraw(circle((0,2), 0.05), white, black);
+    label("$2i$", (0,2), E);
+    label("Im", (0,3), 2N);
+    label("Re", (2,0), 2E);
+  \end{asy}
+  \end{center}
+  % \end{noindent}
+	Which of the following statements about the value of $\theta$ is true?
+	\begin{enumerate}
+		\item $\abs{\theta} = \frac{\pi}{2}$
+		\item $0 < \theta < \frac{\pi}{2}$
+		\item $\frac{\pi}{2} < \theta < \pi$
+		\item $\theta < -\pi$
+	\end{enumerate}
+	\item A particle is released from rest at point $A$ and moves in simple harmonic motion.
+	Upon reaching point $B$, which is $4$ metres to the left of $A$, the particle turns back towards $A$, and reaches it after some time.
+
+	At the first instant the particle is $1$ metre from its central point of motion, its velocity is equal to its acceleration.
+
+	How many seconds elapse between this instant and the first instant the particle is $1$ metre from its central point of motion while moving in the opposite direction to its initial motion?
+	\begin{enumerate}
+		\item $\frac{\pi}{3\sqrt{3}}$
+		\item $\frac{\pi}{\sqrt{3}}$
+		\item $\frac{4\pi}{3\sqrt{3}}$
+		\item $2\pi - \frac{\pi}{\sqrt{3}}$
+	\end{enumerate}
+	\pagebreak
+	\item The complex number $z$ satisfies $\abs{z}\Re(z)=\Im(z)$.
+
+	Which of the following Argand diagrams could represent the locus of $z$?
+	\begin{multicols}{2}
+		\begin{enumerate}
+			\item % \begin{noindent}
+            \begin{center}
+            \begin{asy}
+              size(4cm);
+              arrowtexfactor = 2;
+              import graph;
+              real f(real x) {
+                return atan(x);
+              }
+              draw((-3,0) -- (3,0), black, Arrow(TeXHead));
+              draw((0,-3) -- (0,3), black, Arrow(TeXHead));
+              label("$O$", (0,0), SW);
+              draw(graph(f, -3, 3), black);
+            \end{asy}
+            \end{center}
+            % \end{noindent}
+
+			\item % \begin{noindent}
+            \begin{center}
+            \begin{asy}
+              size(4cm);
+              arrowtexfactor = 2;
+              import graph;
+              real f(real x) {
+                return -atan(x);
+              }
+              draw((-3,0) -- (3,0), black, Arrow(TeXHead));
+              draw((0,-3) -- (0,3), black, Arrow(TeXHead));
+              label("$O$", (0,0), SW);
+              draw(graph(f, -3, 3), black);
+            \end{asy}
+            \end{center}
+            % \end{noindent}
+			      \columnbreak
+			\item % \begin{noindent}
+            \begin{center}
+            \begin{asy}
+              size(4cm);
+              arrowtexfactor = 2;
+              import graph;
+              real f(real x) {
+                return 0.8tan(x);
+              }
+              draw((-2.2,0) -- (2.2,0), black, Arrow(TeXHead));
+              draw((0,-2.2) -- (0,2.2), black, Arrow(TeXHead));
+              label("$O$", (0,0), SW);
+              draw(graph(f, -1.2, 1.2), black);
+            \end{asy}
+            \end{center}
+            % \end{noindent}
+			\item % \begin{noindent}
+            \begin{center}
+            \begin{asy}
+              size(4cm);
+              arrowtexfactor = 2;
+              import graph;
+              real f(real x) {
+                return -0.8tan(x);
+              }
+              draw((-2.2,0) -- (2.2,0), black, Arrow(TeXHead));
+              draw((0,-2.2) -- (0,2.2), black, Arrow(TeXHead));
+              label("$O$", (0,0), SW);
+              draw(graph(f, -1.2, 1.2), black);
+            \end{asy}
+            \end{center}
+            % \end{noindent}
+		\end{enumerate}
+	\end{multicols}
+	\item Let $z$ and $w$ be non-zero complex numbers.
+
+	The point $A$ is represented by the complex number $z$.
+
+	The point $B$ is represented by the complex number $w+iz$.
+
+	Given that $OA \perp OB$, where $O$ is the origin of the Argand plane, which of the following could NOT equal $\abs{w+iz}$?
+	\begin{enumerate}
+		\item $\abs{z}+\abs{w}$
+		\item $\abs{z}-\abs{w}$
+		\item $\abs{w}-\abs{z}$
+		\item $\abs{z+w}$
+	\end{enumerate}
+	\pagebreak
+	\item The non-zero vector $\utilde{u}$ and $\utilde{v}$ lie in a plane, and the direction of the vector $\utilde{w}$ is perpendicular to every line drawn in this plane.
+	The vectors satisfy $\utilde{u}\cdot(\utilde{v}+\utilde{w}) = 0$.
+	% \begin{noindent}
+  \begin{center}
+  \begin{asy}
+    usepackage("accents");
+    size(10cm);
+    draw((-5,0) -- (0,-2) -- (5,0) -- (0,2) -- cycle, black);
+    draw((-2.5,0) -- (0,-1), black, Arrow);
+    draw((0,-1) -- (2.5,0), black, Arrow);
+    draw((2.5,0) -- (2.5,3), black, Arrow);
+    draw((-2.5,0) -- (2.5,0), dashed);
+    draw((-2.5,0) -- (2.5,3), black);
+    label("$\underaccent{\tilde}{u}$", (-1.25,-0.5), SW);
+    label("$\underaccent{\tilde}{v}$", (1.25,-0.5), SE);
+    label("$\underaccent{\tilde}{w}$", (2.5,1.5), E);
+    label("\shortstack{NOT TO \\[0.4em] SCALE}", (5, 1.5));
+  \end{asy}
+  \end{center}
+  % \end{noindent}
+	Let $\alpha$ be the angle between $\utilde{u} + \utilde{v} + \utilde{w}$ and $\utilde{u} + \utilde{v}$, let $\beta$ be the angle between $\utilde{u} + \utilde{v} + \utilde{w}$ and $\utilde{u}$, and let $\gamma$ be the angle between $\utilde{v} + \utilde{w}$ and $\utilde{v}$.
+
+	Which of the following is true?
+	\begin{enumerate}
+		\item $\operatorname{cosec}^2\alpha < \operatorname{cosec}^2\beta + \operatorname{cosec}^2\gamma$
+		\item $\cot^2\alpha > \cot^2\beta + \cot^2\gamma$
+		\item $\sin^2\alpha > \sin^2\beta + \sin^2\gamma$
+		\item $\cos^2\alpha > \cos^2\beta + \cos^2\gamma$
+	\end{enumerate}
+\end{multiplechoice}
+\pagebreak
+\begin{sectionheader}{Section II}
+	\textbf{90 marks\\
+		Attempt Questions 11--16\\
+		Allow about 2 hours and 45 minutes for this section}
+
+	Answer each question in the appropriate writing booklet. Extra writing booklets are available.
+
+	For questions in Section II, your responses should include relevant mathematical reasoning and/or calculations.
+\end{sectionheader}
+\begin{shortanswer}
+	\begin{bookletquestion}{15}
+		\begin{enumerate}
+			\item \mrks{2} Let $z = (3+2i)(2+iw)$, where $w=2+3i$.
+
+			      Express $\bar{z}$ in the form $x+iy$, where $x$ and $y$ are real.
+			\item \mrks{2} Find complex numbers $z$ and $w$ such that $\frac{z}{w}=2+i$ and $zw=2-i$.
+			\item Two lines are given by
+			      \begin{align*}
+				      \mathbf{r}_1 & = \begin{pmatrix} 1 \\ 8 \\ 2 \end{pmatrix} + \lambda \begin{pmatrix} 1 \\ k \\ 2 \end{pmatrix} \;\text{and} \\[1em]
+				      \mathbf{r}_2 & = \begin{pmatrix} k+5 \\ 2 \\ 2 \end{pmatrix} + \mu \begin{pmatrix} k \\ 9 \\ 6 \end{pmatrix},
+			      \end{align*}
+			      where $k$ is a real number.
+			      \begin{enumerate}
+				      \item \mrks{2} Given the lines intersect, by equating the $x$ and $z$ components, show that
+				            \[k\mu - 3\mu + k + 4 = 0.\]
+				      \item \mrks{2} Hence, or otherwise, find the value(s) of $k$ for which the lines intersect.
+			      \end{enumerate}
+			      \questionbreak
+
+			\item Two particles $P$ and $Q$ move on the $x$ axis so that at time $t$ their positions are $x_P=\cos 2t$ and $x_Q=\sin t$.
+			      \begin{enumerate}
+				      \item \mrks{2} Find all times $t$, for $0\leq t \leq 2\pi$, at which $P$ and $Q$ are at the same position.
+				      \item \mrks{1} At one of these times, $P$ and $Q$ meet but do NOT cross each other.
+				            Find this time, justifying your answer.
+			      \end{enumerate}
+			\item \mrks{4} Evaluate $\int_{1}^{25}\frac{\ln x}{(26-x)^2} \dd{x}$.
+		\end{enumerate}
+		\questionend
+	\end{bookletquestion}
+	\pagebreak
+	\begin{bookletquestion}{15}
+		\begin{enumerate}
+			\item \mrks{2} Two identical cubes, $A$ and $B$ each have $8$ vertices $(x, y, z)$, where each of $x$, $y$ and $z$ is $0$ or $1$.
+			      Vertex $(0, 0, 0)$ is marked on cube $A$ and vertex $(1, 0, 0)$ is marked on cube $B$.
+
+			      Exactly $4$ vertices are to be marked on each cube.
+			      On the diagram on page $67$ of the writing booklet, mark the three additional vertices on each cube, so that the marked vertices on the $2$ cubes have identical projections on each of the $xy$, $yz$, and $zx$-planes.
+
+			      Cube $A$ and cube $B$ must NOT have exactly the same $4$ vertices marked.
+			      \begin{multicols}{2}
+				      % \begin{noindent}
+              \begin{center}
+                \begin{asy}
+                  import three;
+                  size(6cm);
+
+                  currentprojection=orthographic(2.5,-2,1);
+
+                  // Convert 3D coordinates to 2D.
+                  pair p(real x, real y, real z) {
+                    return project((x,y,z));
+                  }
+
+                  draw(p(0,0,0)--p(2.7,0,0), black, Arrow(TeXHead));
+                  draw(p(0,0,0)--p(0,2.2,0), black, Arrow(TeXHead));
+                  draw(p(0,0,0)--p(0,0,1.5), black, Arrow(TeXHead));
+
+                  draw(p(1,0,1)--p(1,0,0)--p(1,1,0)--p(1,1,1), black);
+                  draw(p(0,0,1)--p(1,0,1)--p(1,1,1)--p(0,1,1)--cycle, black);
+
+                  draw(p(0,1,0)--p(0,1,1), dashed);
+                  draw(p(0,1,0)--p(1,1,0), dashed);
+
+                  label("$z$", p(0,0,1.5), W);
+                  label("$y$", p(0,2.2,0), NE);
+                  label("$x$", p(2.7,0,0), SE);
+                  label("Cube $A$", p(1.5,-0.5,0), S);
+
+                  // Open marker, drawn on top of everything:
+                  filldraw(circle(p(0,0,0), 0.03), black, black);
+                  filldraw(circle(p(1,0,0), 0.03), white, black);
+                  filldraw(circle(p(0,1,0), 0.03), white, black);
+                  filldraw(circle(p(1,1,0), 0.03), white, black);
+                  filldraw(circle(p(0,0,1), 0.03), white, black);
+                  filldraw(circle(p(1,0,1), 0.03), white, black);
+                  filldraw(circle(p(0,1,1), 0.03), white, black);
+                  filldraw(circle(p(1,1,1), 0.03), white, black);
+
+                  draw(p(-0.45,-0.45,0.25) .. controls p(-0.3,-0.3,0.25) and p(-0.2,-0.2,0.0) .. p(-0.1,-0.1,0.00), black, Arrow(TeXHead));
+                  label(scale(0.7) * "\clap{\shortstack{Marked\\[0.3em]vertex}}", p(-0.25,-0.25,0.425));
+                \end{asy}
+              \end{center}
+              % \end{noindent}
+				      \columnbreak
+				      % \begin{noindent}
+              \begin{center}
+                \begin{asy}
+                  import three;
+                  size(6cm);
+
+                  currentprojection=orthographic(2.5,-2,1);
+
+                  // Convert 3D coordinates to 2D.
+                  pair p(real x, real y, real z) {
+                    return project((x,y,z));
+                  }
+
+                  draw(p(0,0,0)--p(2.7,0,0), black, Arrow(TeXHead));
+                  draw(p(0,0,0)--p(0,2.2,0), black, Arrow(TeXHead));
+                  draw(p(0,0,0)--p(0,0,1.5), black, Arrow(TeXHead));
+
+                  draw(p(1,0,1)--p(1,0,0)--p(1,1,0)--p(1,1,1), black);
+                  draw(p(0,0,1)--p(1,0,1)--p(1,1,1)--p(0,1,1)--cycle, black);
+
+                  draw(p(0,1,0)--p(0,1,1), dashed);
+                  draw(p(0,1,0)--p(1,1,0), dashed);
+
+                  label("$z$", p(0,0,1.5), W);
+                  label("$y$", p(0,2.2,0), NE);
+                  label("$x$", p(2.7,0,0), SE);
+                  label("Cube $B$", p(1.5,-0.5,0), S);
+
+                  // Open marker, drawn on top of everything:
+                  filldraw(circle(p(1,0,0), 0.03), black, black);
+                  filldraw(circle(p(0,0,0), 0.03), white, black);
+                  filldraw(circle(p(0,1,0), 0.03), white, black);
+                  filldraw(circle(p(1,1,0), 0.03), white, black);
+                  filldraw(circle(p(0,0,1), 0.03), white, black);
+                  filldraw(circle(p(1,0,1), 0.03), white, black);
+                  filldraw(circle(p(0,1,1), 0.03), white, black);
+                  filldraw(circle(p(1,1,1), 0.03), white, black);
+
+                  draw(p(-0.45,-0.45,0.25) .. controls p(-0.3,-0.3,0.25) and p(-0.2,-0.2,0.0) .. p(-0.1,-0.1,0.00), black, Arrow(TeXHead));
+                  label(scale(0.7) * "\clap{\shortstack{Unmarked\\[0.3em]vertex}}", p(-0.25,-0.25,0.425));
+                \end{asy}
+              \end{center}
+              % \end{noindent}
+			      \end{multicols}
+			\item \mrks{3} Prove by contradiction that for positive integers $n$,
+			      \[\sqrt{n+1}+\sqrt{n+2}>\sqrt{n}+\sqrt{n+3}.\]
+			\item A particle of mass $m$ is released from rest and falls vertically.
+			      It experiences air resistance of magnitude $mkv$, where $v$ is speed, and $k$ is a positive constant.
+			      The acceleration due to gravity is $g$.
+			      Let $y(t)$ be the distance fallen after $t$ seconds.
+			      \begin{enumerate}
+				      \item \mrks{1} By considering definite integrals, show that $\dot{y}(T)<gT$, for $T>0$.
+				      \item \mrks{1} Using part (i), show that $\ddot{y}(T)>(1-kT)g$, for $T>0$.
+				      \item \mrks{2} Hence show that $\dfrac{1}{2}gT^2\qty(1-\dfrac{kT}{3})<y(T)<\dfrac{1}{2}gT^2$, for $T>0$.
+			      \end{enumerate}
+			      \questionbreak
+
+			\item \mrks{3} A sphere cuts the $x$-axis at the points $(1,0,0)$ and $(6,0,0)$ and touches the $z$-axis at exactly one point.
+			      Find the possible point(s) at which the sphere touches the $z$-axis.
+
+			\item \mrks{3} A particle is projected form the origin with speed $V$ at angle $\alpha$ above the horizontal.
+			      The resistive force on the particle is proportional to its velocity.
+
+			      The position of the particle $t$ seconds after projection is $(x,y)$ and the velocity of the particle at time $t$ seconds after projection is $\utilde{v}(t)=\begin{pmatrix}\dot{x}\\\dot{y}\end{pmatrix}$.
+
+			      Taking the upwards vertical direction and the horizontal direction of projection to be positive, the velocity of the particle at time $t$ is given by
+			      \[\utilde{v}(t)=\begin{pmatrix}Ve^{-kt}\cos\alpha\\\qty(V\sin\alpha+\dfrac{g}{k})e^{-kt}-\dfrac{g}{k}\end{pmatrix}\quad\text{(Do NOT prove this.)}\]
+			      where $k$ is a positive constant and $g$ is acceleration due to gravity.
+
+			      The particle lands on a horizontal platform making an angle $\alpha$ with the platform, as shown in the diagram below.
+			      % \begin{noindent}
+            \begin{center}
+              \begin{asy}
+                size(10cm);
+                arrowtexfactor = 2;
+                draw((0,0) -- (0,4), black, Arrow(TeXHead));
+                draw((0,0) -- (8,0), black, Arrow(TeXHead));
+                label("$O$", (0,0), SW);
+                label("$x$", (8,0), SE);
+                label("$y$", (0,4), NW);
+                draw((5,0) -- (5,1.5) -- (8,1.5), black);
+                draw((0,0) .. controls (3,4) and (5,5) .. (7,1.5), black, Arrow(TeXHead));
+                draw((0,0) -- (3/2,5/2), black, Arrow(TeXHead));
+                draw(arc((0,0), 1, 0, 180*atan(5/3)/pi), black);
+                label("$\alpha$", (1.2,0.6));
+                label("$V$", (3/2,5/2), NW);
+                draw((5.5,4) -- (7,1.5), black);
+                draw(arc((7,1.5), 1, 180, 180 - 180*atan(2.5/1.5)/pi), black);
+                label("$\alpha$", (5.8,2.1));
+              \end{asy}
+            \end{center}
+            % \end{noindent}
+			      Show that the horizontal distance when the particle lands is given by
+			      \[\dfrac{V^2\sin2\alpha}{g+2kV\sin\alpha}.\]
+		\end{enumerate}
+		\questionend
+	\end{bookletquestion}
+	\pagebreak
+	\begin{bookletquestion}{15}
+		\begin{enumerate}
+			\item A particle of mass $1$kg is moving in simple harmonic motion along the $x$-axis.
+			      Initially, the particle is at the origin, and the restoring force acting on it has magnitude $9$ newtons.
+
+			      The particle next returns to the origin $\frac{\pi}{3}$ seconds later, and returns again $\frac{2\pi}{3}$ seconds after that.
+			      \begin{enumerate}
+				      \item \mrks{1} Explain why the period of this motion is $\pi$ seconds.
+				      \item \mrks{2} Find the distance between the origin and the centre of motion.
+				      \item \mrks{2} Find the initial speed of the particle.
+			      \end{enumerate}
+
+			\item
+			      \begin{enumerate}
+				      \item \mrks{2} Let $z$ be a complex number with modulus 1.
+				            Show that
+				            \[\abs{z+1}=\sqrt{2+2\Re(z)}.\]
+				      \item \mrks{3} Show that
+				            \[1+x^5=(1+x)\qty(x+e^{\frac{2i\pi}{5}})\qty(x+e^{\frac{4i\pi}{5}})\qty(x+e^{\frac{6i\pi}{5}})\qty(x+e^{\frac{8i\pi}{5}}).\]
+				      \item \mrks{2} Hence, evaluate
+				            \[\qty(1+\cos\dfrac{2\pi}{5})\qty(1+\cos\dfrac{4\pi}{5})\qty(1+\cos\dfrac{6\pi}{5})\qty(1+\cos\dfrac{8\pi}{5}).\]
+			      \end{enumerate}
+
+			\item \mrks{3} Let $f$ be a continuous function satisfying $f(1+x)=\dfrac{1-f(x)}{1+f(x)}$ for all $x$.
+			      Prove that
+			      \[\int_0^2f(x)\dd{x}=\dfrac{1}{2}\int_0^4f(x+2)\dd{x}.\]
+		\end{enumerate}
+	\end{bookletquestion}
+	\pagebreak
+	\begin{bookletquestion}{15}
+		\begin{enumerate}
+			\item A car of mass $M$ drives up a straight ramp of length $L$ metres to access subsequent storeys of a parking lot.
+			      the vector $\utilde{u}=\cos\theta\hat{\imath}+\sin\theta\hat{\jmath}$ is parallel to the ramp and points directly up the incline.
+
+			      The position of the car is given by $\utilde{r}=x\utilde{u}$.
+			      When moving, the car experiences air resistance $\utilde{R}=-Mkv^2\utilde{u}$, where $v$ is the speed of the car, and $k$ is a positive constant.
+			      The normal reaction force is $\utilde{n}=Mg\cos\theta\hat{\utilde{n}}$, where $\hat{\utilde{n}}=-\sin\theta\hat{\imath}+\cos\theta\hat{\jmath}$.
+			      The force due to gravity is $M\utilde{g}$ and has magnitude $Mg$.
+			      % \begin{noindent}
+            \begin{center}
+              \begin{asy}
+                size(10cm);
+                usepackage("accents");
+                arrowtexfactor = 2;
+                draw((0,0) -- (10,0), black);
+                draw((0,0) -- (10,4), black);
+                draw(arc((0,0), 3, 0, 180*atan(2/5)/pi), black);
+                label("$\theta$", (2.1,0.43));
+                draw((-1.5,1) -- (-1.5,2), black, Arrow(TeXHead));
+                draw((-1.5,1) -- (-0.5,1), black, Arrow(TeXHead));
+                draw((-1.5,1.25) -- (-1.25,1.25) -- (-1.25,1), black);
+                label("$\hat{\imath}$", (-0.5,1), SE);
+                label("$\hat{\jmath}$", (-1.5,2), NW);
+                draw((1,1) -- (2,7/5), black, Arrow(TeXHead));
+                label("$\underaccent{\tilde}{u}$", (1.5,6/5), N+0.5W);
+                draw((4,8/5) -- (18/5,13/5) -- (28/5,17/5) -- (6,12/5), black);
+                dot((24/5,5/2), black);
+                draw((24/5,5/2) -- (34/5,5/2+4/5), black, Arrow(TeXHead));
+                draw((24/5,5/2) -- (14/5,5/2-4/5), black, Arrow(TeXHead));
+                draw((24/5,5/2) -- (4,5/2+2), black, Arrow(TeXHead));
+                draw((24/5,5/2) -- (24/5,5/2-2), black, Arrow(TeXHead));
+                label("$\underaccent{\tilde}{F}$", (34/5,5/2+4/5), NE);
+                label("$M\underaccent{\tilde}{g}$", (24/5,5/2-1.25), E);
+                label("$\underaccent{\tilde}{n}$", (4,5/2+2), 4SE);
+                label("$\underaccent{\tilde}{R}$", (14/5,5/2-4/5), 3NE);
+              \end{asy}
+            \end{center}
+            % \end{noindent}
+			      The car is driven from rest at $x=0$ by its engine, which provides a constant force $\utilde{F}=2Mg\sin\theta\utilde{u}$ while the accelerator is engaged.
+
+			      At $x=d$, the driver disengages the accelerator, and the car continues moving up the ramp, under ONLY the influences of gravity, the reaction force, and air resistance, with the exact speed $V$ required to come to rest at the top of the ramp.
+			      \begin{enumerate}
+				      \item \mrks{2} By considering dot products with $\utilde{u}$, show that \[\ddot{x}=g\sin\theta-kv^2,\] for $0<x<d$.
+				      \item \mrks{2} Show that $V^2=\dfrac{g\sin\theta}{k}\qty(e^{2k(L-d)}-1).$
+				      \item \mrks{3} Find $d$ in terms of $k$ and $L$.
+			      \end{enumerate}
+			      \questionbreak
+
+			\item Suppose $\sqrt{2}$ is rational.
+			      It can be shown that $\sqrt{2}>1$ (do NOT prove this), so there are smallest integers $a>0$ and $b>0$ for which $\sqrt{2}=1+\dfrac{a}{b}$.
+			      \begin{enumerate}
+				      \item \mrks{2} Show that $\dfrac{b}{a}=2+\dfrac{a}{b}$.
+				      \item \mrks{2} Show that $0<b-2a<a$.
+				      \item \mrks{1} Deduce that $\sqrt{2}$ is irrational.
+			      \end{enumerate}
+
+			\item \mrks{3} The non-real numbers $a$ and $b$ satisfy
+			      \[\abs{a+ib}=\sqrt{a^2+b^2}.\]
+			      Prove that $b=ia$.
+		\end{enumerate}
+		\questionend
+		\centerbold{Please turn over}
+	\end{bookletquestion}
+	\pagebreak
+	\begin{bookletquestion}{15}
+		\begin{enumerate}
+			\item In tetrahedron $ABCD$, $K$ is the midpoint of $BC$ and $L$ is the midpoint of $AD$, as shown in the diagram.
+			      % \begin{noindent}
+            \begin{center}
+              \begin{asy}
+                size(12cm);
+                import three;
+                currentprojection=orthographic(6,-30,10);
+                pair p(real x, real y, real z) {
+                  return project((x,y,z));
+                }
+                
+                draw(p(0,0,0) -- p(10,-5,0) -- p(10,5,0) -- p(5,0,8) -- cycle, black);
+                draw(p(10,-5,0) -- p(5,0,8), black);
+                draw(p(0,0,0) -- p(10,5,0), dashed);
+                draw(p(0,0,0) -- p(10,0,0) -- p(5,0,8), dashed);
+                draw(p(10,-5,0) -- p(5/2,0,4) -- p(10,5,0), dashed);
+                dot(p(5,0,0), black);
+                dot(p(10-5/2,0,4), black);
+                dot(p(6.25,-2.5,2), black);
+                dot(p(6.25,2.5,2), black);
+                label("$A$", p(0,0,0), W);
+                label("$B$", p(10,-5,0), S);
+                label("$C$", p(10,5,0), E);
+                label("$D$", p(5,0,8), N);
+                label("$K$", p(10,0,0), E);
+                label("$L$", p(5/2,0,4), NW);
+                label("$P$", p(5,0,0), S);
+                label("$Q$", p(6.25,-2.5,2), NE);
+                label("$R$", p(6.25,2.5,2), NW+N);
+                label("$S$", p(10-5/2,0,4), NE);
+              \end{asy}
+            \end{center}
+            % \end{noindent}
+			      The point $P$ is the midpoint of $AK$, the point $Q$ is the midpoint of $BL$, the point $R$ is the midpoint of $CL$, and the point $S$ is the midpoint of $DK$.
+			      \begin{enumerate}
+				      \item \mrks{1} Show that $\overrightarrow{AP}=\dfrac{1}{4}\qty(\overrightarrow{AB}+\overrightarrow{AC})$.
+				      \item \mrks{3} It can be shown that
+				            \begin{align*}
+					            \overrightarrow{BQ}                & = \dfrac{1}{4}\qty(\overrightarrow{BA}+\overrightarrow{BD})                         \\
+					            \overrightarrow{CR}                & = \dfrac{1}{4}\qty(\overrightarrow{CA}+\overrightarrow{CD})\tag{Do NOT prove these} \\
+					            \text{and}\quad\overrightarrow{DS} & = \dfrac{1}{4}\qty(\overrightarrow{DB}+\overrightarrow{DC}).
+				            \end{align*}
+				            Prove that $P$, $Q$, $R$ and $S$ are the vertices of a parallelogram.
+				      \item \mrks{2} Prove that the points $P$, $Q$, $R$ and $S$ are vertices of a rhombus, if and only if $AD\perp BC$.
+			      \end{enumerate}
+			      \questionbreak
+			\item
+			      \begin{enumerate}
+				      \item \mrks{2} Let $\theta$ be a real number.
+				            Consider the numbers
+				            \[1,e^{i\theta},e^{2i\theta},\cdots,e^{6i\theta}.\]
+				            By dividing the unit circle into equal arcs, or otherwise, show that two of these numbers are less than 1 unit apart on the complex plane.
+				      \item \mrks{3} Hence prove that, for any real number $\theta$, there exists some integer $k$ with $1\leq k \leq 6$, such that $\cos(k\theta)>\dfrac{1}{2}$.
+			      \end{enumerate}
+			\item For integers $n\geq 1$, define $S_n=\sum_{r=1}^n\dfrac{1}{2^r-1}$.
+			      \begin{enumerate}
+				      \item \mrks{1} Show that if $A>\dfrac{8}{7}$, then $\dfrac{A}{2^{k+1}}>S_{k+1}-S_k$, for all integers $k\geq2$.
+				      \item \mrks{3} By using mathematical induction and considering part (i) with a suitable value of $A$, show that $S_n<\dfrac{23}{14}$ for all integers $n\geq1$.
+			      \end{enumerate}
+		\end{enumerate}
+		\questionend
+		\centerbold{Please turn over}
+	\end{bookletquestion}
+	\pagebreak
+	\begin{bookletquestion}{15}
+		\begin{enumerate}
+			\item
+			      \begin{enumerate}
+				      \item \mrks{2} Show that
+				            \[\ln(x+1)>x\ln\qty(\dfrac{x}{x+1})\]
+				            for $x>0$.
+				      \item \mrks{3} By considering $f(x)=\dfrac{\ln(x+1)}{\ln x}$, or otherwise, show that for $x>1$,
+				            \[\log_{x}(x+1)>\log_{x+1}(x+2).\]
+			      \end{enumerate}
+
+			\item Define $I_n=\int^1_0\sin(x^n)\dd{x}$ for integers $n=2,3,4,\dots$.
+			      \begin{enumerate}
+				      \item \mrks{3} Using the substitution $t=x^n$ and integration by parts, show that
+				            \[\sin(1)-I_n=\dfrac{n}{n+1}-2\int^1_0\sqrt[n]{t}\sin^2\qty(\dfrac{t}{2})\dd{t}.\]
+				      \item \mrks{2} Show that
+				            \[\sin(1)-\dfrac{n}{n+1}\leq I_n\leq\sin(1).\]
+				      \item \mrks{3} By considering part (i), or otherwise, show that
+				            \[\sin(1)-I_n>\dfrac{11}{21}.\]
+				      \item \mrks{2} Deduce that $\dfrac{1}{\sin(1)-I_n}$ can NOT be an integer.
+			      \end{enumerate}
+		\end{enumerate}
+	\end{bookletquestion}
+	\centerbold{End of paper}
+\end{shortanswer}
+\newpage
+\blankpage
+\newpage
+\blankpage
+\newpage
+\blankpage
+\newpage
+\thispagestyle{lastpage}
+\vspace*{\fill}
+\begin{center}
+	\includegraphics[height=5cm]{W2_logo.png} \hfill
+\end{center}
+\vspace*{\fill}
+\end{document}
