@@ -152,9 +152,13 @@
 
 \newcommand{\questionbreak}{
 	\end{enumerate}
-	\begin{center}
-		\textbf{Question \theQuestionCounter\ continues on page \nextpage}
-	\end{center}
+	\hfuzz=\maxdimen
+	\parbox{\textwidth}{
+		\begin{center}
+			\textbf{Question \theQuestionCounter\ continues on page \nextpage}
+		\end{center}
+	}
+
 	\pagebreak
 	Question \theQuestionCounter\ (continued)
 	\begin{enumerate}[resume]
